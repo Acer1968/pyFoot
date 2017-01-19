@@ -1,8 +1,8 @@
 import datetime
 import random
 
-import match
-import team
+from lib import match
+from lib import team
 
 from lib import player
 from tools import lists

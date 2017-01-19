@@ -1,7 +1,7 @@
 import random
 import uuid
 
-import personnel
+from lib import personnel
 
 from lib import player
 from tools import lists, utilities
