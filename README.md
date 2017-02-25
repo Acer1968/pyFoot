@@ -1,2 +1,182 @@
 # pyFoot
 A python football manager based in on the concepts from xlFooty.
+
+
+### SQL Tables and Fields
+- Game
+    - Fields
+        - e_id
+        - e_name
+        - e_value
+    - Elements
+        - player_name
+        - player_team_id
+        - season_id
+        - seasons_played
+        - seasons_to_keep_comments
+        - starting_funds
+        - host
+        - port
+        - current_date
+- League
+    - Fields
+        - l_id
+        - l_name
+        - l_nation
+        - l_year_founded
+        - l_tier
+- Nation
+    - Fields
+        - n_id
+        - n_name
+        - n_language
+        - n_confederation
+- Team
+    - Fields
+        - t_id
+        - t_current_league_id
+        - t_year_founded
+        - t_current_funds
+        - t_name
+        - t_mascot
+        - t_short_name
+        - t_manager
+        - t_owner
+        - t_grounds_name
+        - t_city_name
+        - t_currrent_mentality
+        - t_current_form
+- Team_Attribute
+    - Fields
+        - ta_id
+        - ta_team_id
+        - ta_competition_id
+        - ta_aggressiveness
+        - ta_focus_attack
+        - ta_focus_defend
+        - ta_ability_youth_development
+        - ta_ability_training_grounds
+        - ta_ability_physio
+        - ta_ability_scout
+        - ta_coach_attacking
+        - ta_coach_defending
+        - ta_coach_goal
+        - ta_coach_midfield
+- Match (atomic)
+    - Fields
+        - m_id
+        - m_date
+        - m_time
+        - m_played
+        - m_competition_stage
+        - m_team_home
+        - m_team_away
+        - m_score_home
+        - m_score_away
+        - m_fouls_home
+        - m_fouls_away
+        - m_yellow_home
+        - m_yellow_awy
+        - m_shots_on_target_home
+        - m_shots_on_tarket_away
+        - m_shots_off_target_home
+        - m_shots_off_target_away
+        - m_possession_home
+        - m_possession_away
+- Match_Player
+    - Fields
+        - mp_id
+        - mp_player_id
+        - mp_match_id
+        - mp_position_played
+        - mp_started
+        - mp_time_on
+        - mp_time_off
+        - mp_goals
+        - mp_assists
+        - mp_yellow
+        - mp_red
+        - mp_fouls
+        - mp_shots_on_target
+        - mp_shots_off_target
+        - mp_passes_complete
+        - mp_passes_incompplete
+        - mp_tackles
+        - mp_interceptions
+        - mp_goals_stopped
+        - mp_health_start
+        - mp_health_stop
+        - mp_injury
+- Comment
+    - Fields
+        - cmt_id
+        - cmt_match_id
+        - cmt_sequence
+        - cmt_text
+- Season
+    - Fields
+        - s_id
+        - s_year
+        - s_competition
+- Season_Table
+    - Fields
+        - st_id
+        - st_season_id
+        - st_team_id
+        - st_matches_played
+        - st_matches_won
+        - st_matches_lost
+        - st_matches_drawn
+        - st_goals_for
+        - st_goals_against
+        - st_points
+- Competition
+    - Fields
+        - c_id
+        - c_name
+        - c_common_name
+- Player
+    - Fields
+        - p_id
+        - p_nation_id
+        - p_first_name
+        - p_last_name
+        - p_height
+        - p_wight
+        - p_birth_year
+        - p_birth_month
+        - p_birth_day_of_month
+        - p_footed
+        - p_current_form
+        - p_current_health
+        - p_current_mentality
+        - p_current_training
+        - p_current_rating
+        - p_potential_rating
+        - p_potential_growth
+- Player_Season
+    - Fields
+        - pa_id
+        - pa_player_id
+        - pa_season_id
+        - pa_average_rating
+        - pa_average_health
+        - pa_potential_rating
+        - pa_goals
+        - pa_assists
+        - pa_yellow
+        - pa_red
+        - pa_fouls
+        - pa_shots_on_target
+        - pa_shots_off_target
+        - pa_passes_copalete
+        - pa_passes_incopaplete
+        - pa_tackles
+        - pa_interceptions
+        - pa_goals_stopped
+        - pa_times_injured
+- Game_Sequence
+    - Fields
+        - s_id
+        - s_table
+        - s_next_id
