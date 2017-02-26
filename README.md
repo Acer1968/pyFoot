@@ -1,5 +1,5 @@
 # pyFoot
-A python football manager based in on the concepts from xlFooty.
+A python football manager based on the concepts from xlFooty.
 
 
 ### SQL Tables and Fields
@@ -69,14 +69,16 @@ A python football manager based in on the concepts from xlFooty.
         - m_time
         - m_played
         - m_competition_stage
-        - m_team_home
-        - m_team_away
+        - m_team_home_id
+        - m_team_away_id
         - m_score_home
         - m_score_away
         - m_fouls_home
         - m_fouls_away
         - m_yellow_home
-        - m_yellow_awy
+        - m_yellow_away
+        - m_red_home
+        - m_red_away
         - m_shots_on_target_home
         - m_shots_on_tarket_away
         - m_shots_off_target_home
@@ -88,7 +90,7 @@ A python football manager based in on the concepts from xlFooty.
         - mp_id
         - mp_player_id
         - mp_match_id
-        - mp_position_played
+        - mp_position_played (this may be obsolete if season schecule table added)
         - mp_started
         - mp_time_on
         - mp_time_off
@@ -112,12 +114,13 @@ A python football manager based in on the concepts from xlFooty.
         - cmt_id
         - cmt_match_id
         - cmt_sequence
+        - cmt_time
         - cmt_text
 - Season
     - Fields
         - s_id
         - s_year
-        - s_competition
+        - s_competition_id
 - Season_Table
     - Fields
         - st_id
@@ -177,6 +180,6 @@ A python football manager based in on the concepts from xlFooty.
         - pa_times_injured
 - Game_Sequence
     - Fields
-        - s_id
-        - s_table
-        - s_next_id
+        - sq_id
+        - sq_table
+        - sq_next_id
