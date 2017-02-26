@@ -15,23 +15,17 @@ import pickle
 
 from lib import league
 from tools.utilities import get_response
+from tools import data
 
 #  TODO Maintenance like adding new leagues, seasons, teams, and players
 #  TODO Ai
 
 
-path = ''
-filename = 'data/smelly_foot.p'
+def load_game():
+    if not data.is_game():
+        data.make_new_db()
+    return data.get_element('All')
 
-
-def load_game(manager_name):
-    game =  pickle.load( open( path+filename, "rb" ) )
-    if game.get_manager_name() is None and manager_name is not None:
-        game.set_manager_name(manager_name)
-    return game
-
-def save_game(obj):
-    pickle.dump(obj, open(path+filename, "wb"))
 
 def new_game(manager_name):
     return league.League(name='Northern Americas', sample_league=True, manager_name=manager_name)
@@ -79,7 +73,7 @@ def run():
             else: doit = True
             if doit:
                 print('Load')
-                the_league = load_game(manager_name)
+                the_league = load_game()
                 pn = the_league.get_manager_name()
                 if pn is not None:
                     manager_name = pn
@@ -108,4 +102,5 @@ def run():
         else:
             print("WTF?")
 
-run()
+if __name__ == '__main__':
+    run()
