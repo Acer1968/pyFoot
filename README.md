@@ -1,6 +1,20 @@
 # pyFoot
 A python football manager based on the concepts from xlFooty.
 
+## Roadmap
+1) Redesign game for sqlite data management
+    - Remove some of the objects, which were doing the job of data management.
+1) Redesign UI
+    - Seperate UI from application logic.
+    - Add Flask interface as alternative to CLI
+1) Add AI to game
+    - Managers
+    - Maybe:
+        - Players
+        - Match Officials
+        - Owners
+        - League Officials
+
 
 ### SQL Tables and Fields
 - Game
